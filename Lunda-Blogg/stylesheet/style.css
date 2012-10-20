@@ -1,0 +1,302 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+}
+
+body 
+{
+	background: #006699 top center url("../images/back.png") no-repeat;
+	color: #ffffff;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+h1 
+{
+	font-size: 3.5em;
+	letter-spacing: -1px;
+	background: url("../images/header.png") no-repeat;
+	width: 303px;
+	margin: 0 auto;
+	text-indent: -9999em;
+	color: #33ccff;
+}
+
+h2 
+{
+	font-size: 2em;
+	letter-spacing: -1px;
+	background: url("../images/headertwo.png") no-repeat;
+	width: 119px;
+	text-indent: -9999em;
+	color: #33ccff;
+	clear: both;
+	margin: 15px 0;
+}
+
+h3
+{
+	position: absolute;
+	top: 196px;
+	left: 380px;
+	color: #33ccff;
+}
+
+h5 a:link, h5 a:visited 
+{
+	clear: both;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+h5 a:hover, h5 a:active, h5 a:focus 
+{
+	border-bottom: 1px solid #fff;
+}
+
+h4 a
+{
+	background-color: #ff0000;
+	margin-left: 480px;
+	padding: 5px;
+}
+
+h4 a:link, h5 a:visited 
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+h4 a:hover, h5 a:active, h5 a:focus 
+{
+	border-bottom: 1px solid #fff;
+}
+
+p 
+{
+	font-size: 0.9em;
+	line-height: 1.3em;
+	font-family: Lucida Sans Unicode, Helvetica, Arial, Verdana, sans-serif;
+}
+
+p.error 
+{
+	background-color: #603131;
+	border: 1px solid #5c2d2d;
+	width: 260px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+p.success 
+{
+	background-color: #313d60;
+	border: 1px solid #2d395c;
+	width: 260px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+#container 
+{
+	width: 664px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#boxtop 
+{
+	margin: 30px auto 0px;
+	background: url("../images/top.png") no-repeat;
+	width: 663px;
+	height: 23px;
+}
+
+#facebook 
+{
+	margin: 6px auto 1px;
+	float: right;
+}
+
+#linkedin 
+{
+	margin: 4px 6px 0px 1px;
+	float: right;
+}
+
+#page-links
+{
+	margin: 4px 6px 0px 1px;
+	margin-left: 62px;
+	padding: 10px;
+}
+
+#page-links a:link, a:visited 
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#page-links a:hover, a:active, a:focus 
+{
+	border-bottom: 1px solid #33ccff;
+}
+
+#image-link
+{
+	margin: 0px 6px 0px 1px;
+	margin-left: 10px;
+	padding: 4px;
+}
+
+#image-link a:link, a:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#image-link a:hover, a:active, a:focus 
+{
+	border-bottom: 1px solid #33ccff;
+}
+
+#dotted-line 
+{
+	clear: both;
+	margin: 6px auto 1px;
+	border-bottom:1px solid black;
+}
+	
+#boxbot 
+{
+	margin: 1px auto 30px;
+	background: url("../images/fotter.png") no-repeat;
+	width: 664px;
+	height: 25px;
+}
+
+#content 
+{
+	margin: 0 auto;
+	width: 664px;
+	text-align: left;
+	background: url("../images/bg.png") repeat-y;
+	padding: 15px 35px;
+}
+	
+#content ul 
+{
+	margin-left: 0;
+	margin-bottom: 15px;
+}
+		
+#content ul li 
+{
+	list-style: none;
+	clear: both;
+	padding-top: 16px;
+}
+		
+#content ul li: first-child 
+{
+	padding-top: 0;
+}
+
+.datum
+{
+	font-style: italic;
+	font-size: 12px;
+	color: #000000;
+}
+		
+.meta 
+{
+	width: 85px;
+	text-align: left;
+	float: left;
+	min-height: 110px;
+	font-weight: bold;
+}
+		
+.meta img 
+{
+	padding: 5px;
+	background-color: #000000;
+}
+			
+.meta p 
+{
+	font-size: 0.8em;
+}
+		
+.shout 
+{
+	width: 500px;
+	float: left;
+	margin-left: 15px;
+	min-height: 110px;
+	padding-top: 5px;
+}
+
+.topic
+{
+	clear: both;
+	text-align: left;
+	margin-bottom: 6px;
+}
+
+.categori
+{
+	color: #ffffff; 	
+}
+		
+form 
+{
+	clear: both;
+	margin-top: 24px !important; // Mellanrum mellan Kategori texten i inläggen och Gilla knappen.
+}
+		
+.fname, .femail 
+{
+	width: 222px;
+	float: left;
+}
+
+.where
+{
+	clear: both;
+}
+			
+form p 
+{
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+form select
+{
+	background-color: #313d60;
+	border: 1px solid #3399cc;
+	color: #3399cc;  
+}
+			
+form textarea 
+{
+	width: 365px;
+	overflow: hidden; 
+}
+		
+form input, form textarea 
+{
+	background-color: #313d60;
+	border: 1px solid #3399cc;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Lucida Sans Unicode, Helvetica, Arial, Verdana, sans-serif;
+	margin-bottom: 10px;
+}
+
+ h4 form input
+{
+	margin-bottom: 10px;
+}
