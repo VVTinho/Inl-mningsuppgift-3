@@ -52,6 +52,6 @@
 	}
 	else
 	{
-        // Om du inte är en mobil eller tablet enhet.
+        // Om det inte är en mobil eller tablet enhet.
 	}
 ?>

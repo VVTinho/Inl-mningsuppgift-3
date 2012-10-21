@@ -8,6 +8,6 @@
 	// Tar bort id från databasen.
 	$result=mysql_query("DELETE FROM shouts where id=$id");
 	
-	// redirektar för att displaya index.php sidan.
+	// Sökväg till index.php sidan.
 	header("Location:../index.php");
 ?>

@@ -1,5 +1,4 @@
 <?php
-
 	$host = 'localhost'; 
 	$user = 'root'; 
 	$password = 'root'; 
@@ -28,10 +27,10 @@
 
 		$_SESSION['userName']  =  $row['admin_usr_name'];
 		$_SESSION['password'];
-		header("location: ../index.php?apa=gorilla");
+		header("location: ../index.php");
 	}
 	else
 	{
-		echo 'Data Does Not Match <br /> Re-Enter UserName and Password';
+		echo 'Data Does Not Match <br/> Re-Enter UserName and Password';
 	} 
 ?>

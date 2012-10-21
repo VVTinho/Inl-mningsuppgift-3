@@ -1,7 +1,7 @@
 <?php
 	session_start();
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> <!--  Skapar doctype html. -->
 <head> <!--  Skapar head. -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <!-- Skapar en meta charset=utf-8 för att displaya/visa bokstäverna å,ä ocoh ö. -->
 	<title>LundaBlogg by V.V.T</title> <!-- Skapar en title. -->
@@ -86,21 +86,24 @@
 		        
 		                if (mysql_query($sql)) 
 						{
+							// Om det går att posta inlägget vissas texten nedan.
 		                	echo('<p class="success">Tack för ditt inlägg!</p>');
 		                } 
 						else 
 						{
+							// Om det inte går att posta inlägget vissas texten nedan. 
 		                	echo('<p class="error">Något blev fel när du försökte posta ditt inlägg</p>');
 		                }
 					}
-				}
+				} // Avslutar if(isset($_POST['send'])) satsen.
 				
 				// Hämtar alla blogg inlägg från PhpMyAdmin från shouts tabellen och vissar max 8st blogg inlägg.
 			    $query = "SELECT * FROM shouts ORDER BY `id` DESC LIMIT 8;";
 			    $result = mysql_query($query) or die('<p class="error">Det blev fel när du försökte hämta blogg inläggen från databasen.</p>');
     			
 			    ?><ul><? // Skapar en unordered list.
-	
+
+					// Skapar en while loop.	
 				    while ($row = mysql_fetch_array($result)) 
 					{
 			            $ename = stripslashes($row['name']);
@@ -185,11 +188,12 @@
 				<p><input type="submit" value="skicka"/></p> <!-- Skapar en submit knapp. -->
 		    </form> <!-- Avslutar en form. -->
 
+			<!--  Skapar en form som laddar upp bilder. -->
 			<form action="uploadImage/upload_file.php" method="post" enctype="multipart/form-data"> 
 				<label for="file">Ladda upp en bild till Bild-Galleriet:</label>
 				<input type="file" name="file" id="file" />
-				<input type="submit" name="submit" value="Submit"/> 
-			</form>
+				<input type="submit" name="submit" value="Ladda upp"/> 
+			</form> <!-- Avslutar en form. -->
 			
 			<br/> <!-- Skapar en radbrytning. -->
 		
@@ -197,7 +201,7 @@
 		</div> <!--  Avslutar content. -->
 		<div id="boxbot"></div> <!-- Skapat en boxbot som användes i cssen (stylesheet). --> 
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
-		<a href="login-system/logout.php">Sign Out</a> <!-- Skapat en länk som länkas till login.php sidan. -->
+		<a href="login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till login.php sidan. -->
 	</div> <!--  Avslutar container. -->
 </body> <!-- Avslutar body. -->
-</html> <!-- Avslutar html. -->
+</html> <!-- Avslutar doctype html. -->

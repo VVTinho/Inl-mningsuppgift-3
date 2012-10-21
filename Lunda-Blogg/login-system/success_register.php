@@ -3,13 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
-	<title>Success</title>
+	<title>Lunda-Blogg</title>
 </head> 
 <body>
 	<div id="container"> <!-- Skapar en container. -->
 		<h1>LundaBlogg</h1>
 		<h4>Du har registrerat dig nu!</h4>
-		<a href="../index.php"> Login</a>
+		<a href="../index.php"> Logga in</a>
 	</div> <!-- Avsluta container. -->
 </body>
 </html>

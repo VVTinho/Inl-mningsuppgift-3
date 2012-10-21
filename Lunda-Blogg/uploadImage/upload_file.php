@@ -4,16 +4,16 @@
 	$change="";
 	$abc="";
 	
-	
-	 define ("MAX_SIZE","400");
-	 function getExtension($str) 
-	 {
+	// Filluppladning maxstorlek 10Mb. 
+	define ("MAX_SIZE","10000");
+	function getExtension($str) 
+	{
 		$i = strrpos($str,".");
 		if (!$i) { return ""; }
 		$l = strlen($str) - $i;
 		$ext = substr($str,$i+1,$l);
 		return $ext;
-	 }
+	}
 	
 	 $errors=0;
 	  
@@ -33,7 +33,7 @@
 	 		if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) 
 	 		{
 			
-	 			$change='<div class="msgdiv">Unknown Image extension </div> ';
+	 			$change='<div class="msgdiv">Odefinerad bild fil</div> ';
 	 			$errors=1;
 	 		}
 	 		else
@@ -43,7 +43,7 @@
 	
 				if ($size > MAX_SIZE*1024)
 				{
-					$change='<div class="msgdiv">You have exceeded the size limit!</div> ';
+					$change='<div class="msgdiv">För stor fil!</div> ';
 					$errors=1;
 				}
 		
@@ -68,12 +68,14 @@
 				echo $scr;
 		
 				list($width,$height)=getimagesize($uploadedfile);
-		
-				$newwidth=60;
+
+				// Storleken på bilderna som vissas.		
+				$newwidth=600;
 				$newheight=($height/$width)*$newwidth;
 				$tmp=imagecreatetruecolor($newwidth,$newheight);
-	
-				$newwidth1=25;
+				
+				// Storleken på thumbs bilderna.
+				$newwidth1=100;
 				$newheight1=($height/$width)*$newwidth1;
 				$tmp1=imagecreatetruecolor($newwidth1,$newheight1);
 		
@@ -88,13 +90,14 @@
 				imagejpeg($tmp,$filename,100);
 		
 				imagejpeg($tmp1,$filename1,100);
-		
+				
 				imagedestroy($src);
 				imagedestroy($tmp);
 				imagedestroy($tmp1);
-
-				$sql="INSERT INTO images SET images=1"; 
-				$result=mysql_query($sql);
+				
+				// Funkar ej.
+				// $sql="INSERT INTO images SET images=1"; 
+				// $result=mysql_query($sql);
 			}
 		}
 	
@@ -110,50 +113,25 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	<meta content="en-us" http-equiv="Content-Language">
 	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
 	<title>Ladda upp bilder till Bild-Galleriet</title>    
 </head>
-
 <body> <!--  Skapar body. -->
-<div id="container"> <!-- Skapar en container. -->
-	
-	<div align="center" id="err">
-		<?php echo $change; ?>  
-	</div>
-	    
-	<div id="con">
-	<table width="502" cellpadding="0" cellspacing="0" id="main">
-		
-		<td width="500" height="238" valign="top" id="main_right">
-		
-		<div id="posts">
-		&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename; ?>" />  &nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename1; ?>"  />
+	<div id="container"> <!-- Skapar en container. -->	
+		<div align="center" id="err">
+			<?php echo $change; ?>  
+		</div>
+    
+		<div id="posts">&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename; ?>" />  &nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename1; ?>"/>
 		<form method="post" action="" enctype="multipart/form-data" name="form1">
-			<table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr><Td style="height:25px">&nbsp;</Td></tr>
-				
-				<td width="150"><div align="right" class="titles">Bild: </div></td>
-				<td width="350" align="left">
-			
-				<div align="left">
-					<input size="25" name="file" type="file" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10pt" class="box"/>
-				</div>
-				
-				<Td valign="top" height="35px" class="help">Bildens maxstorlek <b>400 </b>kb</span></Td>
-				Du har laddat upp bilderna ovan! Välj en ny bild att ladda upp.
-				
-				<tr><Td></Td><Td valign="top" height="35px"><input type="submit" id="mybut" value="skicka" name="Submit"/></Td></tr>
-				
-				<td width="200">&nbsp;</td>
-				<td width="200"><table width="200" border="0" cellspacing="0" cellpadding="0">
-				<td width="200" align="center"><div align="left"></div></td>
-				<td width="100">&nbsp;</td>
-			</table>
-			</table>
+			Bild:<input size="25" name="file" type="file" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10pt" class="box"/>
+			<input type="submit" id="mybut" value="skicka" name="Submit"/>	
+			Bildens maxstorlek: 10Mb
+ 
+			Du har laddat upp din bild! Välj en ny bild att ladda upp.
 
 			<div id="dotted-line"></div>
 
@@ -161,9 +139,8 @@
 				<a href="../index.php">Gå tillbaka till Startsidan &nbsp;</a> <!-- Skapar en länk till lundasidan.php. -->
 				<a href="../uploadedImages/uploadedImages.php">Gå tillbaka till Bild-Galleriet</a> <!-- Skapar en länk till BildGalleriet -->
 			</div> <!-- Avslutar page-links. -->
-		
+			
 		</form> 		  
-	</table>
-</div> <!-- Avslutar container. -->          
+	</div> <!-- Avslutar container. -->          
 </body> <!--  Avslutar body. -->
 </html>   

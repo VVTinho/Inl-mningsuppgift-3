@@ -22,9 +22,10 @@
 		?>
 		
 		<div id="page-links"> <!--  Skapar page-links. --> 
-			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till lundasidan.php. -->
-			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till kultursidan.php. -->
-			<a href="../imagegallery/imagesC.php">Bilder-C</a> <!-- Skapar en länk till cykelsidan.php. -->
+			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
+			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till imagesB.php. -->
+			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
+			<a href="../imagegallery/imagesD.php">Bilder-D</a> <!-- Skapar en länk till imagesD.php. -->
 		</div> <!-- Avslutar page-links. -->
 		
 		<div id="image-link"> <!--  Skapar image-link. --> 
@@ -32,7 +33,7 @@
 		</div> <!-- Avslutar image-link. -->
 		
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
-		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till login.php sidan. -->
+		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som till logut.php sidan. -->
 
 	</div> <!-- Avslutar container. -->
 </body>

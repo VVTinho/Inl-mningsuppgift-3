@@ -13,17 +13,17 @@
 		<h5><a href="http://www.vvt-mediadesign.se" title="Vladimir">V.V.T</a> <a href="http://www.vvt-mediadesign.se" title="LundaBlog">LundaBlogg</a> <?php echo date("m/d/y");?></h5> 
 		
 		<?php 
-			$files = glob("../uploadedImages/[cC]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+			$files = glob("../uploadedImages/[dD]*.{jpg,png,gif,bmp}", GLOB_BRACE);
 			for ($i=0; $i<count($files); $i++)
 			{
 				$num = $files[$i];
-				echo '<img src="'.$num.'" alt="Lunda-Bilder" />'."<br/><br/><br/><br/>";
+				echo '<img src="'.$num.'" alt="Bilder-D" />'."<br/><br/><br/><br/>";
 			}
 		?>
 		<div id="page-links"> <!--  Skapar page-links. --> 
 			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
 			<a href="../imagegallery/imagesB.php">Bilder-B</a> <!-- Skapar en länk till imagesB.php. -->
-			<a href="../imagegallery/imagesD.php">Bilder-D</a> <!-- Skapar en länk till imagesD.php. -->
+			<a href="../imagegallery/imagesC.php">Bilder-C</a> <!-- Skapar en länk till imagesC.php. -->
 		</div> <!-- Avslutar page-links. -->
 
 		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->
@@ -34,7 +34,6 @@
 		
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
 		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till logut.php sidan. -->
-
 	</div> <!-- Avslutar container. -->
 </body>
 </html>

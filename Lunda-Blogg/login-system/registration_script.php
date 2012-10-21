@@ -1,11 +1,11 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$password = 'root';
-	$database = 'blog';
+	$host = 'localhost'; // Kör servern lokalt.
+	$user = 'root';  // Användare.
+	$password = 'root';  // Ska alltid stå 'root' om du kör  MAMP (mac).
+	$database = 'blog';  // Namnet på din databas.
 	 
-	$conn = mysql_connect($host,$user,$password) or die('Server Information is not Correct'); 
-	mysql_select_db($database,$conn) or die('Database Information is not correct');
+	$conn = mysql_connect($host,$user,$password) or die('Server Informationen är inte korrekt'); 
+	mysql_select_db($database,$conn) or die('Databas Informationen är inte korrekt');
 	  
 	$userName = mysql_real_escape_string($_POST['txtUser']);
 	 

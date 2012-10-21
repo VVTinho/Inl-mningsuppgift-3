@@ -28,8 +28,6 @@
 			    $self = $_SERVER['PHP_SELF']; 
 			    $ipaddress = ("$_SERVER[REMOTE_ADDR]");
 			    require_once ('../database/db.php');
-				// require_once ('../login-system/lock.php');
-				// echo ("Welcome $login_session");
 				print "<hr width='600' size=4>"; 	    
 				
 			    $connect = mysql_connect($mysql_hostname,$mysql_user,$mysql_password) or die('<p class="error">Det går ej att komma åt databasen just nu.</p>');
@@ -129,7 +127,7 @@
 		</div>
 		<div id="boxbot"></div>
 		<input type="button" onclick="popup()" value="Blogg-Policy">
-		<a href="../ogin-system/logout.php">Sign Out</a>
+		<a href="../ogin-system/logout.php">Logga ut</a>
 	</div>
 </body>
 </html>

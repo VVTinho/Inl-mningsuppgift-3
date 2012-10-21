@@ -6,6 +6,7 @@ function popup()
 	)
 }
 
+// Skapar en funktion som bestämmer antal skrivna bokstäver i textfälten.
 function EnforceMaximumLength(fld,len) 
 {
 	if(fld.value.length > len) { fld.value = fld.value.substr(0,len); }

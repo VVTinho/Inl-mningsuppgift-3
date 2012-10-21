@@ -21,18 +21,19 @@
 			}
 		?>
 		<div id="page-links"> <!--  Skapar page-links. --> 
-			<a href="../imagegallary/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till kultursidan.php. -->
-			<a href="../imagegallery/imagesC.php">Bilder-C</a> <!-- Skapar en länk till cykelsidan.php. -->
+			<a href="../imagegallary/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
+			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
+			<a href="../imagegallery/imagesD.php">Bilder-D</a> <!-- Skapar en länk till imagesD.php. -->
 		</div> <!-- Avslutar page-links. -->
-
-		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uloadedImages.php. -->
+		
+		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->
 		
 		<div id="image-link"> <!--  Skapar image-link. --> 
 			<a href="../index.php">Gå tillbaka till bloggen</a> <!-- Skapar en länk till index.php. -->
 		</div> <!-- Avslutar image-link. -->
 		
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
-		<a href="../login-system/logout.php">Sign Out</a> <!-- Skapat en länk som länkas till login.php sidan. -->
+		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till logut.php sidan. -->
 
 	</div> <!-- Avslutar container. -->
 </body>
