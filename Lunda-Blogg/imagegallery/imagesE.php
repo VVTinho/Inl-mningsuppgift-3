@@ -14,8 +14,8 @@
 		</br>
 		</br> 
 		<?php
-			echo "Bilder-C";  
-			$files = glob("../uploadedImages/[cC]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+			echo "Bilder-E"; 
+			$files = glob("../uploadedImages/[eE]*.{jpg,png,gif,bmp}", GLOB_BRACE);
 			for ($i=0; $i<count($files); $i++)
 			{
 				$num = $files[$i];
@@ -25,8 +25,8 @@
 		<div id="page-links"> <!--  Skapar page-links. --> 
 			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
 			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till imagesB.php. -->
-			<a href="../imagegallery/imagesD.php">Bilder-D &nbsp;</a> <!-- Skapar en länk till imagesD.php. -->
-			<a href="../imagegallery/imagesE.php">Bilder-E</a> <!-- Skapar en länk till imagesE.php. -->
+			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
+			<a href="../imagegallery/imagesD.php">Bilder-D</a> <!-- Skapar en länk till imagesD.php. -->
 		</div> <!-- Avslutar page-links. -->
 
 		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->
@@ -36,11 +36,10 @@
 		</div> <!-- Avslutar image-link. -->
 
 		<div id="dotted-line"></div>
-		
-		</br>
+
+		</br>		
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
 		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till logut.php sidan. -->
-
 	</div> <!-- Avslutar container. -->
 </body>
 </html>

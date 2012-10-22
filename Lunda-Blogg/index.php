@@ -4,7 +4,7 @@
 <!DOCTYPE HTML> <!--  Skapar doctype html. -->
 <head> <!--  Skapar head. -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <!-- Skapar en meta charset=utf-8 för att displaya/visa bokstäverna å,ä ocoh ö. -->
-	<title>LundaBlogg by V.V.T</title> <!-- Skapar en title. -->
+	<title>LundaBlogg av V.V.T</title> <!-- Skapar en title. -->
 	<link rel="stylesheet" href="stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
 	<script type="text/javascript" src="javascript/javascript.js"></script> <!-- Skapar en sökväg till javascript.css. -->
 </head> <!-- Avslutar head. -->
@@ -81,9 +81,9 @@
 						$date = date("Y-m-d H:i:s"); // Skapar en variabel $date som är lika med date (år, månad, dag, timme).
 				        $post = htmlspecialchars(mysql_real_escape_string($_POST['post']));
 				        
-						// Skickar in namn, email, date, lund = topic texten och den valda kategorin till databasen.    	
+						// Skickar in namn, email, date, lund = topic texten, ipadress, och den valda kategorin/LundaBlogg till databasen.    	
 		                $sql = "INSERT INTO shouts SET name='$name', email='$email', date='$date', lund='$lund', LundaBlogg='$LundaBlogg', post='$post', ipaddress='$ipaddress';";  
-		        
+		        		
 		                if (mysql_query($sql)) 
 						{
 							// Om det går att posta inlägget vissas texten nedan.
@@ -125,7 +125,7 @@
 									<img src="'.$grav_url.'" alt="Gravatar" /><p>'.$ename.'</p>  <!-- Hämtar Gravatar bilden och vissar ut bilden. -->
 								</div>
 								<div class="shout">
-									<p>'.$epost.'</p>
+									<p>'.$epost.'</p> <!-- Vissar ut topic inlägget. -->
 								</div>
 								<div class="topic">
 									<p>'.$ebox.'</p> <!-- Vissar ut text inlägget. -->
@@ -133,10 +133,9 @@
 								<div class="categori">
 									<p>Kategori: '.$ecategori.'</p> <!-- Vissar ut text Kategori: + den valda kategorin. -->
 								</div>
-							</li>' // Avsluta listan.
+							</li>' 
 						);
 						
-
 						// Skapat en Gilla submit knapp.
 						?>
 							<h4>
@@ -163,6 +162,7 @@
 					}
 
 			    ?></ul><? // Avslutar unordered list.
+
 				 echo ("<h3> Välkommen ". $_SESSION['userName'] . "</h3>");
 
 		    ?>

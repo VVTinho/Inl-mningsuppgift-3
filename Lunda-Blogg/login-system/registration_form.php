@@ -8,13 +8,13 @@
 <body>
 	<div id="container"> <!-- Skapar en container. -->
 		<h1>LundaBlogg</h1>
-		<h3>Registreringsformulär:</h3>
+		<h4>Registreringsformulär:</h4>
 		<form id="form1" name="form1" method="post" action="../login-system/registration_script.php">
 			Användarnamn:
 			<input type="text" name="txtUser" id="txtUser"/>
 			Lösenord:
 			<input type="password" name="txtPassword" id="txtPassword"/>
-			<input type="submit" name="btnRegister" id="btnRegister" value="Register"/>
+			<input type="submit" name="btnRegister" id="btnRegister" value="Registrera dig"/>
 		</form>
 	</div> <!-- Avslutar container. -->
 </body>

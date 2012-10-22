@@ -158,12 +158,28 @@ p.success
 #image-link a:hover, a:active, a:focus 
 {
 	border-bottom: 1px solid #33ccff;
+<<<<<<< HEAD
 }
 
 #dotted-line 
 {
 	clear: both;
 	margin: 6px auto 1px;
+=======
+}
+
+.imagename
+{
+	font-weight: bold;
+	font-style: italic;
+	margin-left: 660px;
+}
+
+#dotted-line 
+{
+	clear: both;
+	margin: 6px auto 1px;
+>>>>>>> Test-3 (code changes)
 	border-bottom:1px solid black;
 }
 	

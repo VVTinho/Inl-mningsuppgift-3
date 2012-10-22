@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>LundaBlogg by V.V.T</title>
+	<title>LundaBlogg av V.V.T</title>
 	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/>
 	<script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>

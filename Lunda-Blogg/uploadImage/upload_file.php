@@ -1,4 +1,7 @@
-<?php 
+<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
+<?php
+	require_once ('../database/db.php'); // Skapar en sökväg till db.php.
+	 
 	error_reporting(0);
 	
 	$change="";
@@ -66,15 +69,17 @@
 				}
 		
 				echo $scr;
+				// echo $filename;
+				echo "<span class=\"imagename\">$filename</span>";
 		
 				list($width,$height)=getimagesize($uploadedfile);
 
-				// Storleken på bilderna som vissas.		
+				// Storlek på bilderna som vissas.		
 				$newwidth=600;
 				$newheight=($height/$width)*$newwidth;
 				$tmp=imagecreatetruecolor($newwidth,$newheight);
 				
-				// Storleken på thumbs bilderna.
+				// Storlek på thumbs bilderna.
 				$newwidth1=100;
 				$newheight1=($height/$width)*$newwidth1;
 				$tmp1=imagecreatetruecolor($newwidth1,$newheight1);
@@ -95,9 +100,9 @@
 				imagedestroy($tmp);
 				imagedestroy($tmp1);
 				
-				// Funkar ej.
-				// $sql="INSERT INTO images SET images=1"; 
-				// $result=mysql_query($sql);
+				// Skicka in bildens images nr 1.
+				$sql="INSERT INTO images SET images=1"; 
+				$result=mysql_query($sql);
 			}
 		}
 	
@@ -121,9 +126,7 @@
 </head>
 <body> <!--  Skapar body. -->
 	<div id="container"> <!-- Skapar en container. -->	
-		<div align="center" id="err">
 			<?php echo $change; ?>  
-		</div>
     
 		<div id="posts">&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename; ?>" />  &nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $filename1; ?>"/>
 		<form method="post" action="" enctype="multipart/form-data" name="form1">

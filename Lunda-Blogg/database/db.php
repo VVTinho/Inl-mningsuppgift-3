@@ -1,7 +1,7 @@
 <?php
 	$mysql_hostname = "localhost"; // Kör servern lokalt.
 	$mysql_user = "root"; // Användare.
-	$mysql_password = "root"; // Ska alltid stå 'root' om du kör  MAMP (mac).
+	$mysql_password = "root"; // Ska alltid stå 'root' om du kör MAMP (mac), annars skriv inget.
 	$mysql_database = "blog"; // Namnet på din databas.
 	
 	// Kör koppling till databasen och om du inte kommer åt din databas, så körs 'or die'
