@@ -19,7 +19,7 @@ h1
 	width: 303px;
 	margin: 0 auto;
 	text-indent: -9999em;
-	color: #33ccff;
+	color: #ff6633;
 }
 
 h2 
@@ -158,6 +158,14 @@ p.success
 #image-link a:hover, a:active, a:focus 
 {
 	border-bottom: 1px solid #33ccff;
+<<<<<<< HEAD
+}
+
+#dotted-line 
+{
+	clear: both;
+	margin: 6px auto 1px;
+=======
 }
 
 .imagename
@@ -171,6 +179,7 @@ p.success
 {
 	clear: both;
 	margin: 6px auto 1px;
+>>>>>>> Test-3 (code changes)
 	border-bottom:1px solid black;
 }
 	
