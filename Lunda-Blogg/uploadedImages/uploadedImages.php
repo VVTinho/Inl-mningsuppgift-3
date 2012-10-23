@@ -28,7 +28,9 @@
 			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till imagesB.php. -->
 			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
 			<a href="../imagegallery/imagesD.php">Bilder-D &nbsp;</a> <!-- Skapar en länk till imagesD.php. -->
-			<a href="../imagegallery/imagesE.php">Bilder-E</a> <!-- Skapar en länk till imagesE.php. -->
+			<a href="../imagegallery/imagesE.php">Bilder-E &nbsp;</a> <!-- Skapar en länk till imagesE.php. -->
+			<a href="../imagegallery/imagesF.php">Bilder-F &nbsp;</a> <!-- Skapar en länk till imagesF.php. -->
+			<a href="../imagegallery/imagesG.php">Bilder-G</a> <!-- Skapar en länk till imagesG.php. -->
 		</div> <!-- Avslutar page-links. -->
 		
 		<div id="image-link"> <!--  Skapar image-link. --> 

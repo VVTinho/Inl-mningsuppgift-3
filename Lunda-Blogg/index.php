@@ -44,10 +44,11 @@
 				// setcookie('site_user', '<secure_hash>', time()+(3600*24*7)); // Inlogningen är slut.
 				
 			    $self = $_SERVER['PHP_SELF']; 
-			    $ipaddress = ("$_SERVER[REMOTE_ADDR]");
+			    $ipaddress = ("$_SERVER[REMOTE_ADDR]"); // $ipaddress är lika med användarens/users IP. 
 			    require_once ('database/db.php'); // Skapar en sökväg till db.php.
+				// require_once ('delete/delete.php'); // Skapar en sökväg till delete.php.
  				
-				print "<hr width='600' size=4>"; // Skapar en vit radbrytning som är 600 width och size 4.	    
+				print "<hr size=4>"; // Skapar en vit radbrytning som är 600 width och size 4.	    
 				
 				// Skapar mysql_connect till $mysql_hostname, $mysql_user och $mysql_password.
 			    $connect = mysql_connect($mysql_hostname,$mysql_user,$mysql_password) or die('<p class="error">Det går ej att komma åt databasen just nu.</p>');
@@ -74,6 +75,7 @@
 					// Om alla fält är ifyllda, kör koden nedan. 
 					else 
 					{
+						// htmlspecialchars() är en funktion som gör att du undviker att någon skickar in html kod.   
 				        $name = htmlspecialchars(mysql_real_escape_string($_POST['name'])); 
 				        $email = htmlspecialchars(mysql_real_escape_string($_POST['email']));
 						$lund = htmlspecialchars(mysql_real_escape_string($_POST['lund']));
@@ -111,7 +113,7 @@
 						$ebox = stripslashes($row['lund']);
 						$ecategori = stripslashes($row['LundaBlogg']);
 			            $epost = stripslashes($row['post']);
-						// Hämtar Gravatar bild när du fyller i din mail adress.
+						// Hämtar Gravatar bild när du fyller i din mail adress. Obs! Om du har skapat eller redan har ett Gravatar konto.
 			            $grav_url = "http://www.gravatar.com/avatar.php?gravatar_id=".md5(strtolower($eemail))."&size=70";
 		 				
 						// Vissar ut allt inom echo parantesrena.
@@ -145,7 +147,7 @@
 							</form>
 							</h4>
 							<?
-							echo "<h4> <a href=\"delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
+								echo "<h4> <a href=\"delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
 							?>
 						<?
 						
@@ -158,9 +160,9 @@
 							echo "Du har Gillat detta inlägg.";
 						}
 
-						echo "<hr width='600'>"; // Skapar en vit rand som är 600 width. 
+						echo "<hr>"; // Skapar en vit rand som är 600 width. 
 					}
-
+					
 			    ?></ul><? // Avslutar unordered list.
 
 				 echo ("<h3> Välkommen ". $_SESSION['userName'] . "</h3>");
@@ -168,13 +170,13 @@
 		    ?>
 						
 		    <form action="<?php $self ?>" method="post"> <!-- Skapar en form. -->
-			    <h2>LundaBlogg</h2>
+			    <h2>LundaBlogg</h2> <!-- .Css filen skapar/hämtar en liten bild (LudaBlogg) -->
 			    <div class="fname"><label for="name"><p>Namn:</p></label><input name="name" type="text" cols="20" onkeyup="EnforceMaximumLength(this,12)"/></div>
 			    <div class="femail"><label for="email"><p>Epost:</p></label><input name="email" type="text" cols="20"/></div>
 				<div class="where"><label for="lund"><p>Skriv ditt blogg ämne:</p></label><input name="lund" type="text" cols="20" onkeyup="EnforceMaximumLength(this,40)"/></div>
 			    <p>Starta tråden med att posta något:</p><textarea name="post" rows="5" cols="40" onkeyup="EnforceMaximumLength(this,110)"></textarea> <!-- Skapar en textarea. -->
 			    </br> <!-- Skapar en radbrytning. -->
-				</select><br/>
+				</select><br/> <!-- Skapar en select form. -->
 					<p>Välj kategori som du vill lägga din post i:</p>
 					<!-- Skapar en dropdown meny med tre värden/value. --> 
 					<select name="LundaBlogg" size="1"> <!--  Namnet på dropdown menyn + size = hur många rader som ska visas. -->
@@ -185,14 +187,14 @@
 				</br> <!-- Skapar en radbrytning. -->
 				</br> <!-- Skapar en radbrytning. -->
 				<input name="send" type="hidden"/>
-				<p><input type="submit" value="skicka"/></p> <!-- Skapar en submit knapp. -->
+				<p><input type="submit" value="skicka"/></p> <!-- Skapar en submit knapp (skicka). -->
 		    </form> <!-- Avslutar en form. -->
 
 			<!--  Skapar en form som laddar upp bilder. -->
 			<form action="uploadImage/upload_file.php" method="post" enctype="multipart/form-data"> 
-				<label for="file">Ladda upp en bild till Bild-Galleriet:</label>
+				<label for="file">Ladda upp en bild till Bild-Galleriet:</label> <!--  Skapar en titel för formen. -->
 				<input type="file" name="file" id="file" />
-				<input type="submit" name="submit" value="Ladda upp"/> 
+				<input type="submit" name="submit" value="Ladda upp"/> <!-- Skapar en submit knapp (Ladda upp). --> 
 			</form> <!-- Avslutar en form. -->
 			
 			<br/> <!-- Skapar en radbrytning. -->

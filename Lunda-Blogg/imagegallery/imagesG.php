@@ -10,12 +10,12 @@
 		<h1>LundaBlogg</h1>
 
 		<!-- Skapar länkar + vissar ut dagens datum. -->  
-		<h5><a href="http://www.vvt-mediadesign.se" title="Vladimir">V.V.T</a> <a href="http://www.vvt-mediadesign.se" title="LundaBlog">LundaBlogg</a> <?php echo date("m/d/y");?></h5>
+		<h5><a href="http://www.vvt-mediadesign.se" title="Vladimir">V.V.T</a> <a href="http://www.vvt-mediadesign.se" title="LundaBlog">LundaBlogg</a> <?php echo date("m/d/y");?></h5> 
 		</br>
 		</br> 
 		<?php
-			echo "Bilder-A";  
-			$files = glob("../uploadedImages/[aA]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+			echo "Bilder-G"; 
+			$files = glob("../uploadedImages/[gG]*.{jpg,png,gif,bmp}", GLOB_BRACE);
 			for ($i=0; $i<count($files); $i++)
 			{
 				$num = $files[$i];
@@ -23,14 +23,14 @@
 			}
 		?>
 		<div id="page-links"> <!--  Skapar page-links. --> 
+			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
 			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till imagesB.php. -->
 			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
 			<a href="../imagegallery/imagesD.php">Bilder-D &nbsp;</a> <!-- Skapar en länk till imagesD.php. -->
 			<a href="../imagegallery/imagesE.php">Bilder-E &nbsp;</a> <!-- Skapar en länk till imagesE.php. -->
-			<a href="../imagegallery/imagesF.php">Bilder-F &nbsp;</a> <!-- Skapar en länk till imagesF.php. -->
-			<a href="../imagegallery/imagesG.php">Bilder-G</a> <!-- Skapar en länk till imagesG.php. -->
+			<a href="../imagegallery/imagesF.php">Bilder-F</a> <!-- Skapar en länk till imagesF.php. -->
 		</div> <!-- Avslutar page-links. -->
-		
+
 		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->
 		
 		<div id="image-link"> <!--  Skapar image-link. --> 
@@ -38,8 +38,8 @@
 		</div> <!-- Avslutar image-link. -->
 
 		<div id="dotted-line"></div>
-		
-		</br>
+
+		</br>		
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
 		<a href="../login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till logut.php sidan. -->
 	</div> <!-- Avslutar container. -->

@@ -6,20 +6,47 @@
 
 body 
 {
-	background: #006699 top center url("../images/back.png") no-repeat;
+	/*background: #006699 top center url("../images/back.png") no-repeat;*/
 	color: #ffffff;
 	font-family: Helvetica, Arial, Verdana, sans-serif;
+	background: green;
+}
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 600px) 
+{
+	body 
+	{
+		background: #a1a1a1;
+	}
+}
+
+/* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) 
+{
+	body 
+	{
+		background: #313d60;
+	}
+}
+
+/* Print */
+@media print 
+{
+	body 
+	{
+		background: none !important;
+	}
 }
 
 h1 
 {
 	font-size: 3.5em;
-	letter-spacing: -1px;
 	background: url("../images/header.png") no-repeat;
-	width: 303px;
-	margin: 0 auto;
+	width: 100%; 
+	margin: 0% 27%;
 	text-indent: -9999em;
-	color: #ff6633;
+	color: #33ccff;
 }
 
 h2 
@@ -27,7 +54,7 @@ h2
 	font-size: 2em;
 	letter-spacing: -1px;
 	background: url("../images/headertwo.png") no-repeat;
-	width: 119px;
+	width: 100%;
 	text-indent: -9999em;
 	color: #33ccff;
 	clear: both;
@@ -37,8 +64,8 @@ h2
 h3
 {
 	position: absolute;
-	top: 196px;
-	left: 380px;
+	top: 34%;
+	left: 24%;
 	color: #33ccff;
 }
 
@@ -57,8 +84,8 @@ h5 a:hover, h5 a:active, h5 a:focus
 h4 a
 {
 	background-color: #ff0000;
-	margin-left: 480px;
-	padding: 5px;
+	margin-left: 44%;
+	padding: 0.6%;
 }
 
 h4 a:link, h5 a:visited 
@@ -69,7 +96,12 @@ h4 a:link, h5 a:visited
 
 h4 a:hover, h5 a:active, h5 a:focus 
 {
-	border-bottom: 1px solid #fff;
+	border-bottom: 1% solid #fff;
+}
+
+hr
+{
+	width: 94%;
 }
 
 p 
@@ -83,7 +115,7 @@ p.error
 {
 	background-color: #603131;
 	border: 1px solid #5c2d2d;
-	width: 260px;
+	/*width: 260px;*/
 	padding: 10px;
 	margin-bottom: 15px;
 }
@@ -92,23 +124,23 @@ p.success
 {
 	background-color: #313d60;
 	border: 1px solid #2d395c;
-	width: 260px;
+	/*width: 260px;*/
 	padding: 10px;
 	margin-bottom: 15px;
 }
 
 #container 
 {
-	width: 664px;
-	margin: 20px auto;
+	max-width: 664px;
+	margin: 5% 24%;
 	text-align: center;
 }
 
 #boxtop 
 {
-	margin: 30px auto 0px;
+	margin: 6% auto 0%;
 	background: url("../images/top.png") no-repeat;
-	width: 663px;
+	width: 100%;
 	height: 23px;
 }
 
@@ -126,9 +158,9 @@ p.success
 
 #page-links
 {
-	margin: 4px 6px 0px 1px;
-	margin-left: 62px;
-	padding: 10px;
+	margin: 1% 2%;
+	margin-left: 10%;
+	padding: 2%;
 }
 
 #page-links a:link, a:visited 
@@ -158,14 +190,6 @@ p.success
 #image-link a:hover, a:active, a:focus 
 {
 	border-bottom: 1px solid #33ccff;
-<<<<<<< HEAD
-}
-
-#dotted-line 
-{
-	clear: both;
-	margin: 6px auto 1px;
-=======
 }
 
 .imagename
@@ -179,25 +203,23 @@ p.success
 {
 	clear: both;
 	margin: 6px auto 1px;
->>>>>>> Test-3 (code changes)
 	border-bottom:1px solid black;
 }
 	
 #boxbot 
 {
-	margin: 1px auto 30px;
+	margin: 0.5% 0% 3% 0%;
 	background: url("../images/fotter.png") no-repeat;
-	width: 664px;
+	width: 100%;
 	height: 25px;
 }
 
 #content 
 {
-	margin: 0 auto;
-	width: 664px;
+	width: 100%;
 	text-align: left;
 	background: url("../images/bg.png") repeat-y;
-	padding: 15px 35px;
+	padding: 15px;
 }
 	
 #content ul 
@@ -227,7 +249,7 @@ p.success
 		
 .meta 
 {
-	width: 85px;
+	width: 100%;
 	text-align: left;
 	float: left;
 	min-height: 110px;
@@ -247,7 +269,7 @@ p.success
 		
 .shout 
 {
-	width: 500px;
+	width: 100%;
 	float: left;
 	margin-left: 15px;
 	min-height: 110px;
@@ -269,12 +291,12 @@ p.success
 form 
 {
 	clear: both;
-	margin-top: 24px !important; // Mellanrum mellan Kategori texten i inläggen och Gilla knappen.
+	margin-top: 4% !important; 
 }
 		
 .fname, .femail 
 {
-	width: 222px;
+	width: 100%;
 	float: left;
 }
 
@@ -295,10 +317,16 @@ form select
 	border: 1px solid #3399cc;
 	color: #3399cc;  
 }
+
+/*wtextarea = boxen som du skriver ditt inlägg i.*/
+textarea
+{
+	width: 90%;
+}
 			
 form textarea 
 {
-	width: 365px;
+	/*width: 365px;*/
 	overflow: hidden; 
 }
 		
@@ -312,7 +340,7 @@ form input, form textarea
 	margin-bottom: 10px;
 }
 
- h4 form input
+h4 form input
 {
 	margin-bottom: 10px;
 }

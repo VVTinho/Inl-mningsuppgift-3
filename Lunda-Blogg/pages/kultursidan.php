@@ -28,7 +28,7 @@
 			    $self = $_SERVER['PHP_SELF']; 
 			    $ipaddress = ("$_SERVER[REMOTE_ADDR]");
 			    require_once ('../database/db.php');
-				print "<hr width='600' size=4>"; 	    
+				print "<hr size=4>"; 	    
 				
 			    $connect = mysql_connect($mysql_hostname,$mysql_user,$mysql_password) or die('<p class="error">Det går ej att komma åt databasen just nu.</p>');
 			    
@@ -93,7 +93,7 @@
 						</li>'
 					);
 					
-					print "<hr width='600'>"; 
+					print "<hr>"; 
 				}
 				
 			    ?></ul><?
