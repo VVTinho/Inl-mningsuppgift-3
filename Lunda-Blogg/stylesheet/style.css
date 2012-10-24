@@ -6,13 +6,13 @@
 
 body 
 {
-	/*background: #006699 top center url("../images/back.png") no-repeat;*/
+	/* background: #006699 top center url("../images/back.png") no-repeat; */
 	color: #ffffff;
 	font-family: Helvetica, Arial, Verdana, sans-serif;
 	background: green;
 }
 
-/* Minimum width of 600 pixels. */
+/* Minsta bredd 600 pixels. */
 @media screen and (min-width: 600px) 
 {
 	body 
@@ -21,7 +21,7 @@ body
 	}
 }
 
-/* Minimum width of 960 pixels. */
+/* Minsta bredd 960 pixels. */
 @media screen and (min-width: 960px) 
 {
 	body 
@@ -41,12 +41,10 @@ body
 
 h1 
 {
-	font-size: 3.5em;
-	background: url("../images/header.png") no-repeat;
+	font-size: 2.6em;
 	width: 100%; 
-	margin: 0% 27%;
-	text-indent: -9999em;
 	color: #33ccff;
+	text-shadow: 0 0 0.1em #000000, 0 0 0.1em #000000;
 }
 
 h2 
@@ -64,9 +62,8 @@ h2
 h3
 {
 	position: absolute;
-	top: 34%;
-	left: 24%;
 	color: #33ccff;
+	margin-top: -2.6%;
 }
 
 h5 a:link, h5 a:visited 
@@ -99,6 +96,7 @@ h4 a:hover, h5 a:active, h5 a:focus
 	border-bottom: 1% solid #fff;
 }
 
+/* Det vita strecket som skiljer postinläggen */
 hr
 {
 	width: 94%;
@@ -115,7 +113,7 @@ p.error
 {
 	background-color: #603131;
 	border: 1px solid #5c2d2d;
-	/*width: 260px;*/
+	/* width: 260px; */
 	padding: 10px;
 	margin-bottom: 15px;
 }
@@ -124,7 +122,7 @@ p.success
 {
 	background-color: #313d60;
 	border: 1px solid #2d395c;
-	/*width: 260px;*/
+	/* width: 260px; */
 	padding: 10px;
 	margin-bottom: 15px;
 }
@@ -138,10 +136,16 @@ p.success
 
 #boxtop 
 {
-	margin: 6% auto 0%;
+	margin: 5% 0% 0% 0%;
 	background: url("../images/top.png") no-repeat;
-	width: 100%;
+	width: 109%;
 	height: 23px;
+}
+
+#boxbot h6
+{
+	margin-top: -1%;
+	width: 95%;
 }
 
 #facebook 
@@ -158,7 +162,8 @@ p.success
 
 #page-links
 {
-	margin: 1% 2%;
+	letter-spacing: 0.4px;
+	margin: 1% 8%;
 	margin-left: 10%;
 	padding: 2%;
 }
@@ -211,7 +216,7 @@ p.success
 	margin: 0.5% 0% 3% 0%;
 	background: url("../images/fotter.png") no-repeat;
 	width: 100%;
-	height: 25px;
+	padding: 15px;
 }
 
 #content 
@@ -245,6 +250,11 @@ p.success
 	font-style: italic;
 	font-size: 12px;
 	color: #000000;
+}
+
+#allImages
+{
+ 	border: 2px solid #ffffff;
 }
 		
 .meta 
@@ -318,7 +328,7 @@ form select
 	color: #3399cc;  
 }
 
-/*wtextarea = boxen som du skriver ditt inlägg i.*/
+/* wtextarea = boxen som du skriver ditt inlägg i. */
 textarea
 {
 	width: 90%;
@@ -326,7 +336,7 @@ textarea
 			
 form textarea 
 {
-	/*width: 365px;*/
+	/* width: 365px; */
 	overflow: hidden; 
 }
 		
@@ -342,5 +352,14 @@ form input, form textarea
 
 h4 form input
 {
-	margin-bottom: 10px;
+	margin-bottom: 0.1%;
+}
+ 
+/* file = browse knappen. */
+#file 
+{
+	margin-left: -1%;
+	width: 74%;
+	height: 8%;
+	padding: 0% 1% 2% 0%;
 }

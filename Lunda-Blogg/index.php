@@ -21,8 +21,8 @@
 			<a href="http://www.facebook.com"><img src="images/socialnetwork/facebook.png" border="0"></a>
 		</div> <!-- Avslutar facebook. -->
 		<div id="page-links"> <!--  Skapar page-links. --> 
-			<a href="pages/lundasidan.php">Lunda-Inlägg &nbsp;</a> <!-- Skapar en länk till lundasidan.php. -->
-			<a href="pages/kultursidan.php">Kultur-Inlägg &nbsp;</a> <!-- Skapar en länk till kultursidan.php. -->
+			<a href="pages/lundasidan.php">Lunda-Inlägg</a> <!-- Skapar en länk till lundasidan.php. -->
+			<a href="pages/kultursidan.php">Kultur-Inlägg</a> <!-- Skapar en länk till kultursidan.php. -->
 			<a href="pages/cykelsidan.php">Cykel-Inlägg</a> <!-- Skapar en länk till cykelsidan.php. -->
 		</div> <!-- Avslutar page-links. -->
 		<div id="image-link"> <!--  Skapar image-link. --> 
@@ -42,13 +42,15 @@
 				}*/
 				
 				// setcookie('site_user', '<secure_hash>', time()+(3600*24*7)); // Inlogningen är slut.
+
+				echo ("<h3> Välkommen ". $_SESSION['userName'] . "</h3>");
 				
 			    $self = $_SERVER['PHP_SELF']; 
 			    $ipaddress = ("$_SERVER[REMOTE_ADDR]"); // $ipaddress är lika med användarens/users IP. 
 			    require_once ('database/db.php'); // Skapar en sökväg till db.php.
 				// require_once ('delete/delete.php'); // Skapar en sökväg till delete.php.
  				
-				print "<hr size=4>"; // Skapar en vit radbrytning som är 600 width och size 4.	    
+				echo "<hr size=4>"; // Skapar en vit radbrytning som är 600 width och size 4.	    
 				
 				// Skapar mysql_connect till $mysql_hostname, $mysql_user och $mysql_password.
 			    $connect = mysql_connect($mysql_hostname,$mysql_user,$mysql_password) or die('<p class="error">Det går ej att komma åt databasen just nu.</p>');
@@ -165,8 +167,6 @@
 					
 			    ?></ul><? // Avslutar unordered list.
 
-				 echo ("<h3> Välkommen ". $_SESSION['userName'] . "</h3>");
-
 		    ?>
 						
 		    <form action="<?php $self ?>" method="post"> <!-- Skapar en form. -->
@@ -194,14 +194,14 @@
 			<form action="uploadImage/upload_file.php" method="post" enctype="multipart/form-data"> 
 				<label for="file">Ladda upp en bild till Bild-Galleriet:</label> <!--  Skapar en titel för formen. -->
 				<input type="file" name="file" id="file" />
-				<input type="submit" name="submit" value="Ladda upp"/> <!-- Skapar en submit knapp (Ladda upp). --> 
+				<input type="submit" name="submit" value="Ladda upp" id="bild_button"/> <!-- Skapar en submit knapp (Ladda upp). --> 
 			</form> <!-- Avslutar en form. -->
 			
 			<br/> <!-- Skapar en radbrytning. -->
 		
 			<?php echo "<a href=\"https://en.gravatar.com/site/signup\">Om du inte har ett Gravatar konto, skapa ett Gravatar konto</a>";?>	<!-- Skapat en länk till Gravatar. -->
 		</div> <!--  Avslutar content. -->
-		<div id="boxbot"></div> <!-- Skapat en boxbot som användes i cssen (stylesheet). --> 
+		<div id="boxbot"><h6>Copyright 2012 vvt-mediadesign.se</h6></div> <!-- Skapat en boxbot som användes i cssen (stylesheet). --> 
 		<input type="button" onclick="popup()" value="Blogg-Policy"> <!-- Skapat en input type="button" som kör funktionen popup(). -->
 		<a href="login-system/logout.php">Logga ut</a> <!-- Skapat en länk som länkas till login.php sidan. -->
 	</div> <!--  Avslutar container. -->

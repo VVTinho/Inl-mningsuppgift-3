@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>LundaBlogg av V.V.T</title>
-	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/>
+	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
 	<script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>
 <body>
@@ -22,6 +22,9 @@
 			<a href="../pages/kultursidan.php">Kultur-Inlägg &nbsp;</a>
 			<a href="../index.php">Startsidan</a>
 		</div>
+		<div id="image-link"> <!--  Skapar image-link. --> 
+			<a href="../uploadedImages/uploadedImages.php">Bild-Galleri</a> <!-- Skapar en länk till lundasidan.php. -->
+		</div> <!-- Avslutar image-link. -->
 		<div id="dotted-line"></div>
 		<div id="content">    
 			<?php
@@ -93,8 +96,30 @@
 							</div>
 						</li>'
 					);
+
+					// Skapat en Gilla submit knapp.
+						?>
+							<h4>
+							<form action="<?php echo $self?>" method="POST">
+								<input type="hidden" name="id" value="<?php echo $row['id']?>"/>
+								<input type = "submit" name="Gilla" value = 'Gilla'"/>
+							</form>
+							</h4>
+							<?
+								echo "<h4> <a href=\"delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
+							?>
+						<?
+
+					echo "Antal Gilla: " .$row['likes']; // Vissar ut/echo antal 'likes' i inläggen.
+						
+					// Laddar upp/vissar en bild på en tumme-upp och skriver ut en text.
+					if($_POST['Gilla'] && $_POST['id'] == $row['id'])
+					{
+						echo '<img src="images/tummen-upp.png"/>'; // Vissar ut en bild på en tumme upp.
+						echo "Du har Gillat detta inlägg.";
+					}
 					
-					print "<hr>"; 
+					echo "<hr>"; 
 				}
 				
 			    ?></ul><?
@@ -115,18 +140,26 @@
 					<option value="Cyklar">Cyklar</option>
 					<option value="Kultur">Kultur</option>
 				</select>
-				</br>
-				</br>
+				</br> <!-- Skapar en radbrytning. -->
+				</br> <!-- Skapar en radbrytning. -->
 				<input name="send" type="hidden"/>
 				<p><input type="submit" value="skicka"/></p>
 		    </form>
-			<br/>
+
+			<!--  Skapar en form som laddar upp bilder. -->
+			<form action="../uploadImage/upload_file.php" method="post" enctype="multipart/form-data"> 
+				<label for="file">Ladda upp en bild till Bild-Galleriet:</label> <!--  Skapar en titel för formen. -->
+				<input type="file" name="file" id="file" />
+				<input type="submit" name="submit" value="Ladda upp" id="bild_button"/> <!-- Skapar en submit knapp (Ladda upp). --> 
+			</form> <!-- Avslutar en form. -->			
+
+			<br/>  <!-- Skapar en radbrytning. -->
 			
 			<?php echo "<a href=\"https://en.gravatar.com/site/signup\">Om du inte har ett Gravatar konto, skapa ett Gravatar konto</a>";?>	
 		</div>
-		<div id="boxbot"></div>
+		<div id="boxbot"><h6>Copyright 2012 vvt-mediadesign.se</h6></div> <!-- Skapat en boxbot som användes i cssen (stylesheet). --> 
 		<input type="button" onclick="popup()" value="Blogg-Policy">
 		<a href="../login-system/logout.php">Logga ut</a>
-	</div>
-</body>
-</html>
+	</div> <!--  Avslutar container. -->
+</body> <!-- Avslutar body. -->
+</html> <!-- Avslutar doctype html. -->

@@ -4,19 +4,16 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww23200\viewh13560\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\f0\fs24 \cf0 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";\
+\f0\fs24 \cf0 \
+Database: `blog`\
 \
---\
--- Database: `blog`\
---\
 CREATE DATABASE `blog` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;\
 USE `blog`;\
 \
 -- --------------------------------------------------------\
 \
---\
--- Table structure for table `images`\
---\
+Table structure for table `images`\
+\
 \
 CREATE TABLE `images` (\
   `images` varchar(255) NOT NULL,\
@@ -24,9 +21,9 @@ CREATE TABLE `images` (\
   PRIMARY KEY (`imageID`)\
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;\
 \
---\
--- Dumping data for table `images`\
---\
+\
+Dumping data for table `images`\
+\
 \
 INSERT INTO `images` VALUES('1', 1);\
 INSERT INTO `images` VALUES('1', 2);\
@@ -49,9 +46,8 @@ INSERT INTO `images` VALUES('1', 18);\
 \
 -- --------------------------------------------------------\
 \
---\
--- Table structure for table `shouts`\
---\
+Table structure for table `shouts`\
+\
 \
 CREATE TABLE `shouts` (\
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\
@@ -69,23 +65,20 @@ CREATE TABLE `shouts` (\
   KEY `name` (`name`)\
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;\
 \
---\
--- Dumping data for table `shouts`\
---\
 \
-INSERT INTO `shouts` VALUES(15, 'Vladimir', 'vladimir.trigueiros@gmail.com', 'Hur m\'c3\'a5nga cykel aff\'c3\'a4rer finns det i Lund?', 'Cyklar', '2012-10-08 22:22:28', 6, 'Jag tror att det finns 20st officiella cykelaff\'c3\'a4rer, och n\'c3\'a5gra skumma ...', '::1');\
+Dumping data for table `shouts`\
+\
+INSERT INTO `shouts` VALUES(15, 'Vladimir', 'vladimir.trigueiros@gmail.com', 'Hur m\'c3\'a5nga cykel aff\'c3\'a4rer finns det i Lund?', 'Cyklar', '2012-10-08 22:22:28', 7, 'Jag tror att det finns 20st officiella cykelaff\'c3\'a4rer, och n\'c3\'a5gra skumma ...', '::1');\
 INSERT INTO `shouts` VALUES(16, 'V.V.T', 'vladimir.trigueiros@gmail.com', 'Hur m\'c3\'a5nga klubbar finns det i Lund?', 'Lund', '2012-10-09 22:22:20', 6, 'Det finns 10st klubbar i Lund', '::1');\
 INSERT INTO `shouts` VALUES(17, 'VVTinho', 'vladimir.trigueiros@gmail.com', 'Hur m\'c3\'a5nga museum finns det i centrala Lund?', 'Kultur', '2012-10-10 22:22:13', 12, 'Det finns cirka 10st museum ...', '::1');\
 \
 -- --------------------------------------------------------\
 \
---\
--- Table structure for table `tbladmin`\
---\
+Table structure for table `tbladmin`\
 \
 CREATE TABLE `tbladmin` (\
   `admin_id` int(11) NOT NULL AUTO_INCREMENT,\
   `admin_usr_name` varchar(225) NOT NULL,\
   `admin_pwd` varchar(225) NOT NULL,\
   PRIMARY KEY (`admin_id`)\
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;}
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;}

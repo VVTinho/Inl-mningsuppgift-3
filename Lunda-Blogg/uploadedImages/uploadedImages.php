@@ -19,7 +19,7 @@
 			for ($i=0; $i<count($files); $i++)
 			{
 				$num = $files[$i];
-				echo '<img src="'.$num.'"" />'."<br/><br/>";
+				echo '<img src="'.$num.' "  id="allImages" " />'."<br/><br/>";
 			}
 		?>
 		
