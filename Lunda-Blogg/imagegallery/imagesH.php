@@ -13,16 +13,16 @@
 		<h5><a href="http://www.vvt-mediadesign.se" title="Vladimir">V.V.T</a> <a href="http://www.vvt-mediadesign.se" title="LundaBlog">LundaBlogg</a> <?php echo date("m/d/y");?></h5> 
 		</br>
 		</br> 
-		<?php
-			echo "Bilder-E"; 
-			$files = glob("../uploadedImages/[eE]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+		<?php 
+			echo "Bilder-H"; 
+			$files = glob("../uploadedImages/[hH]*.{jpg,png,gif,bmp}", GLOB_BRACE);
 			for ($i=0; $i<count($files); $i++)
 			{
 				$num = $files[$i];
 				echo '<img src="'.$num.'" alt="" />'."<br/><br/>";
 			}
-
-			$images = glob("../uploadedImages/[eE]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+			
+			$images = glob("../uploadedImages/[hH]*.{jpg,png,gif,bmp}", GLOB_BRACE);
 			
 			// Echo ut namnen på de upladdade bilderna.
 			foreach($images as $image)
@@ -35,9 +35,9 @@
 			<a href="../imagegallery/imagesB.php">Bilder-B &nbsp;</a> <!-- Skapar en länk till imagesB.php. -->
 			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
 			<a href="../imagegallery/imagesD.php">Bilder-D &nbsp;</a> <!-- Skapar en länk till imagesD.php. -->
-			<a href="../imagegallery/imagesF.php">Bilder-F &nbsp;</a> <!-- Skapar en länk till imagesF.php. -->
-			<a href="../imagegallery/imagesG.php">Bilder-G &nbsp;</a> <!-- Skapar en länk till imagesG.php. -->
-			<a href="../imagegallery/imagesH.php">Bilder-H</a> <!-- Skapar en länk till imagesH.php. -->
+			<a href="../imagegallery/imagesE.php">Bilder-E &nbsp;</a> <!-- Skapar en länk till imagesE.php. -->
+			<a href="../imagegallery/imagesF.php">Bilder-F</a> <!-- Skapar en länk till imagesF.php. -->
+			<a href="../imagegallery/imagesG.php">Bilder-G</a> <!-- Skapar en länk till imagesG.php. -->
 		</div> <!-- Avslutar page-links. -->
 
 		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->

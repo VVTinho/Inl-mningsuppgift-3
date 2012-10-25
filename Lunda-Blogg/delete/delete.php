@@ -5,7 +5,7 @@
 	// $id = hämtar/$_GET id.
 	$id = $_GET['id'];
 	
-	// Tar bort id från databasen.
+	// Tar bort inlägg från databasen.
 	$result=mysql_query("DELETE FROM shouts WHERE id=$id");
 	
 	// Sökväg till index.php sidan.

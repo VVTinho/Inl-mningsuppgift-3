@@ -21,6 +21,14 @@
 				$num = $files[$i];
 				echo '<img src="'.$num.'" alt="" />'."<br/><br/>";
 			}
+
+			$images = glob("../uploadedImages/[gG]*.{jpg,png,gif,bmp}", GLOB_BRACE);
+			
+			// Echo ut namnen på de upladdade bilderna.
+			foreach($images as $image)
+			{
+				echo basename($image) , "<br>" ;
+			}
 		?>
 		<div id="page-links"> <!--  Skapar page-links. --> 
 			<a href="../imagegallery/imagesA.php">Bilder-A &nbsp;</a> <!-- Skapar en länk till imagesA.php. -->
@@ -28,7 +36,8 @@
 			<a href="../imagegallery/imagesC.php">Bilder-C &nbsp;</a> <!-- Skapar en länk till imagesC.php. -->
 			<a href="../imagegallery/imagesD.php">Bilder-D &nbsp;</a> <!-- Skapar en länk till imagesD.php. -->
 			<a href="../imagegallery/imagesE.php">Bilder-E &nbsp;</a> <!-- Skapar en länk till imagesE.php. -->
-			<a href="../imagegallery/imagesF.php">Bilder-F</a> <!-- Skapar en länk till imagesF.php. -->
+			<a href="../imagegallery/imagesF.php">Bilder-F &nbsp;</a> <!-- Skapar en länk till imagesF.php. -->
+			<a href="../imagegallery/imagesH.php">Bilder-H</a> <!-- Skapar en länk till imagesH.php. -->
 		</div> <!-- Avslutar page-links. -->
 
 		<a href="../uploadedImages/uploadedImages.php">Se alla bilder</a> <!-- Skapar en länk till uploadedImages.php. -->
