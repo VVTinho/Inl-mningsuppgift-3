@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- Om du stannar på sidan mer än 10 min skickas du till login formuläret. --> 
+	<meta http-equiv="refresh" content = "600; url=http://www.dailyinfo.se/Lunda-Blogg/login-system/login_form.php">
 	<title>LundaBlogg av V.V.T</title>
 	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
 	<script type="text/javascript" src="../javascript/javascript.js"></script>
@@ -31,7 +33,7 @@
 			    $self = $_SERVER['PHP_SELF']; 
 			    $ipaddress = ("$_SERVER[REMOTE_ADDR]");
 			    require_once ('../database/db.php');
-				print "<hr size=4>"; 	    
+				echo "<hr size=4>"; 	    
 				
 			    $connect = mysql_connect($mysql_hostname,$mysql_user,$mysql_password) or die('<p class="error">Det går ej att komma åt databasen just nu.</p>');
 			    
@@ -106,7 +108,7 @@
 							</form>
 							</h4>
 							<?
-								echo "<h4> <a href=\"delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
+								echo "<h4> <a href=\"../delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
 							?>
 						<?
 
@@ -115,7 +117,7 @@
 					// Laddar upp/vissar en bild på en tumme-upp och skriver ut en text.
 					if($_POST['Gilla'] && $_POST['id'] == $row['id'])
 					{
-						echo '<img src="images/tummen-upp.png"/>'; // Vissar ut en bild på en tumme upp.
+						echo '<img src="../images/tummen-upp.png"/>'; // Vissar ut en bild på en tumme upp.
 						echo "Du har Gillat detta inlägg.";
 					}
 					

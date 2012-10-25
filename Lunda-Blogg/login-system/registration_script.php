@@ -11,7 +11,7 @@
 	 
 	$password = mysql_real_escape_string($_POST['txtPassword']);
 	 
-	// Kryptera lösenordet med md5.
+	// Kryptera lösenordet med md5. Jag ska även ha med salt säkerhet.
 	$password = md5(mysql_real_escape_string ($password));
 	 
 	if(isset($_POST['btnRegister']))

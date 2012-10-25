@@ -1,9 +1,12 @@
 <?php
 	session_start();
 ?>
+
 <!DOCTYPE HTML> <!--  Skapar doctype html. -->
 <head> <!--  Skapar head. -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <!-- Skapar en meta charset=utf-8 för att displaya/visa bokstäverna å,ä ocoh ö. -->
+	<!-- Om du stannar på sidan mer än 10 min skickas du till login formuläret. --> 
+	<meta http-equiv="refresh" content = "600; url=http://www.dailyinfo.se/Lunda-Blogg/login-system/login_form.php">
 	<title>LundaBlogg av V.V.T</title> <!-- Skapar en title. -->
 	<link rel="stylesheet" href="stylesheet/style.css" type="text/css"/> <!-- Skapar en sökväg till min style.css. -->
 	<script type="text/javascript" src="javascript/javascript.js"></script> <!-- Skapar en sökväg till javascript.css. -->

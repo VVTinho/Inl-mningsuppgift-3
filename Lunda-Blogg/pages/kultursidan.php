@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- Om du stannar på sidan mer än 10 min skickas du till login formuläret. --> 
+	<meta http-equiv="refresh" content = "600; url=http://www.dailyinfo.se/Lunda-Blogg/login-system/login_form.php">
 	<title>LundaBlogg av V.V.T</title>
 	<link rel="stylesheet" href="../stylesheet/style.css" type="text/css"/>
 	<script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>
 <body>
-	<div id="container">
+	<div id="container"> <!-- Skapar en container. -->
 		<h1>LundaBlogg</h1>
 		<h5><a href="http://www.vvt-mediadesign.se" title="Vladimir">V.V.T</a> <a href="http://www.vvt-mediadesign.se" title="LundaBlog">LundaBlogg</a> <?php echo date("m/d/y");?> <h5>
 		<div id="boxtop"></div>
@@ -17,11 +19,14 @@
 		<div id="facebook">
 			<a href="http://www.facebook.com"><img src="../images/socialnetwork/facebook.png" border="0"></a>
 		</div>
-		<div id="page-links">
+		<div id="page-links"> <!--  Skapar page-links. --> 
 			<a href="../pages/lundasidan.php">Lunda-Inlägg &nbsp;</a>
 			<a href="../pages/cykelsidan.php">Cykel-Inlägg &nbsp;</a>
 			<a href="../index.php">Startsidan</a>
-		</div>
+		</div> <!-- Avslutar page-links. -->
+		<div id="image-link"> <!--  Skapar image-link. --> 
+			<a href="../uploadedImages/uploadedImages.php">Bild-Galleri</a> <!-- Skapar en länk till lundasidan.php. -->
+		</div> <!-- Avslutar image-link. -->
 		<div id="dotted-line"></div>
 		<div id="content">    
 			<?php
@@ -92,8 +97,30 @@
 							</div>
 						</li>'
 					);
+
+					// Skapat en Gilla submit knapp.
+					?>
+						<h4>
+						<form action="<?php echo $self?>" method="POST">
+							<input type="hidden" name="id" value="<?php echo $row['id']?>"/>
+							<input type = "submit" name="Gilla" value = 'Gilla'"/>
+						</form>
+						</h4>
+						<?
+							echo "<h4> <a href=\"../delete/delete.php?id=$res[id]\"> Radera Inlägg</a> </h4>";
+						?>
+					<?
 					
-					print "<hr>"; 
+					echo "Antal Gilla: " .$row['likes']; // Vissar ut/echo antal 'likes' i inläggen.
+					
+					// Laddar upp/vissar en bild på en tumme-upp och skriver ut en text.
+					if($_POST['Gilla'] && $_POST['id'] == $row['id'])
+					{
+						echo '<img src="../images/tummen-upp.png"/>'; // Vissar ut en bild på en tumme upp.
+						echo "Du har Gillat detta inlägg.";
+					}
+					
+					echo "<hr>"; 
 				}
 				
 			    ?></ul><?
@@ -119,11 +146,19 @@
 				<input name="send" type="hidden"/>
 				<p><input type="submit" value="skicka"/></p>
 		    </form>
-			<br/>
+
+			<!--  Skapar en form som laddar upp bilder. -->
+			<form action="../uploadImage/upload_file.php" method="post" enctype="multipart/form-data"> 
+				<label for="file">Ladda upp en bild till Bild-Galleriet:</label> <!--  Skapar en titel för formen. -->
+				<input type="file" name="file" id="file" />
+				<input type="submit" name="submit" value="Ladda upp" id="bild_button"/> <!-- Skapar en submit knapp (Ladda upp). --> 
+			</form> <!-- Avslutar en form. -->
+
+			<br/> <!-- Skapar en radbrytning. -->
 			
 			<?php echo "<a href=\"https://en.gravatar.com/site/signup\">Om du inte har ett Gravatar konto, skapa ett Gravatar konto</a>";?>	
 		</div>
-		<div id="boxbot"></div>
+		<<div id="boxbot"><h6>Copyright 2012 vvt-mediadesign.se</h6></div> <!-- Skapat en boxbot som användes i cssen (stylesheet). --> 
 		<input type="button" onclick="popup()" value="Blogg-Policy">
 		<a href="../login-system/logout.php">Logga ut</a>
 	</div>

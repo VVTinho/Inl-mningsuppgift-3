@@ -79,7 +79,7 @@
 				$newheight=($height/$width)*$newwidth;
 				$tmp=imagecreatetruecolor($newwidth,$newheight);
 				
-				// Storlek på thumbs bilderna.
+				// Storlek på thumbs bilderna som skapas.
 				$newwidth1=100;
 				$newheight1=($height/$width)*$newwidth1;
 				$tmp1=imagecreatetruecolor($newwidth1,$newheight1);
@@ -100,7 +100,7 @@
 				imagedestroy($tmp);
 				imagedestroy($tmp1);
 				
-				// Skicka in bildens images nr 1.
+				// Skicka in bildens images nr 1. Sql ej klar.
 				$sql="INSERT INTO images SET images=1"; 
 				$result=mysql_query($sql);
 			}
